@@ -1,20 +1,4 @@
-// const path = require("path");
 
-// const fs = require("fs")
-
-
-// console.log(__filename);
-// console.log(__dirname);
-
-// console.log(path.basename(__filename));
-
-// console.log(path.dirname(__filename));
-// console.log(path.dirname(__dirname));
-// console.log(path.extname(__filename));
-// console.log(path.extname(__dirname));
-// console.log(path.parse(__filename).base);
-// console.log(path.join( 'backend','forntend', 'index.html'));
-// console.log(path.resolve('backend',"./frontend",'index.html'));
 "scissors", "paper","rock"
 
 
