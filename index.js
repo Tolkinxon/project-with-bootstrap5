@@ -10,7 +10,17 @@ const rps = (p1, p2) => {
         w[0] === 'p' && w[w.length - 1] === 'k' || 
         w[0] === 'r' && w[w.length - 1] === 's'
        ){
-        return '"Player 1 won!"'
+        return 'Player 1 won!'
+    }
+    else if(
+        w[0] === 's' && w[w.length - 1 ] === 's' ||
+        w[0] === 'p' && w[w.length - 1] === 'r' || 
+        w[0] === 'r' && w[w.length - 1] === 'k'
+    ){
+        return 'Draw'
+    }
+    else{
+        return 'Player 2 won!'
     }
 
 };
@@ -18,5 +28,6 @@ const rps = (p1, p2) => {
 
 
 console.log(rps("scissors", "paper"));
-https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
+console.log(rps("scissors", "paper"));
+// https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
 
