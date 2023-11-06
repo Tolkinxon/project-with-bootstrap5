@@ -1,11 +1,27 @@
-function solution(str){
-    const arr = []
-    for(i = 0; i < str.length; i += 2){
 
-        arr[i / 2] = i === str.length - 1  ? str[i] + '_' :  str[i] + str[i + 1] 
-    }
+function solution(string) {
+   
+   const camelCase = [...string].filter(item => {
+                                                    return item != item.toLocaleLowerCase()
+                                                })
+    let strr = ''
+    camelCase.map(item => {
+        strr.search(item) === -1 ? strr += item : strr
+    })
 
-    console.log(arr);
+    const camelCase2 = [...strr]
+
+   let str = string
+   camelCase2.forEach(item => str = str.split(item).join(` ${item}`))
+
+   return str
+    
 }
 
-solution('')
+
+
+
+
+
+
+
