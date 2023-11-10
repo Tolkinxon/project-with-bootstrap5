@@ -7,11 +7,12 @@ function add(x){
     resultFn.valueOf = function(){
             return sum;
         };
+        console.log(resultFn.valueOf);
     return resultFn;
 }
 
-console.log(add(2)(2)(2).valueOf());
 
 
 
 
+const a = add(1)(2)
