@@ -11,6 +11,9 @@ Array.prototype.sameStructureAs = function (other) {
     
             if(isNaN((+key + 0)) && key === arr2Str[i]){
                 check++
+                if(key === "\"" ){
+                    return true
+                }
             }
     
             if(!isNaN((+key + 0))){
@@ -28,17 +31,20 @@ Array.prototype.sameStructureAs = function (other) {
         else{
             return false
         }
-    
-    
     }
     
-    const arr = [1, 2,  5,[5,6]]
+    const arr =  [1,'[',']']
+
+
+
     
-    // arr.sameStructureAs( [1, 5,[5,6]])
+
+
+    // arr.sameStructureAs(['[',']',1])
     
     
-    console.log(arr.sameStructureAs([1,  5,[5,6]]));
+    console.log(arr.sameStructureAs([1,'[',']']));
     
     
     
-    
+    // https://www.codewars.com/kata/520446778469526ec0000001/train/javascript
