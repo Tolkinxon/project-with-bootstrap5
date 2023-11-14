@@ -136,12 +136,12 @@ function cuttingSpace(string){
   }
   
    const readyWord = word.split('  ').join(' ')
-   return readyWord.length < 37 ? readyWord : readyWord.slice(0, 37) + '...'
+   return readyWord
   
   }
   
   
-  console.log(decodeMorse('     ...---... -.-.--   - .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-  '));
+  console.log(decodeMorse('  --- --. .-.-.-  '));
   
   
   
