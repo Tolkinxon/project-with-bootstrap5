@@ -71,12 +71,7 @@ function cuttingSpace(string){
     }
   }
   
-  
-  
-  
-  
-  
-  
+
   
   
   function decodeMorse(string){
@@ -129,7 +124,8 @@ function cuttingSpace(string){
       case '-----': word += '0'; break;
       case '...---...': word += 'SOS'; break;
       case '-.-.--': word += '!'; break;
-      case '.-.-.-': word += '...'; break;
+      case '.-.-.- ': word += '.'; break;
+
   
       case '': word += ' '; break;
     }
@@ -141,15 +137,13 @@ function cuttingSpace(string){
   }
   
   
-  console.log(decodeMorse('  --- --. .-.-.-  '));
+  console.log(decodeMorse('  ..-. .- .-. --- --. .- -  '));
+
   
   
   
   
-  
-  
-    //https://www.codewars.com/kata/54b724efac3d5402db00065e/train/javascript
-  
+
   
   
   
