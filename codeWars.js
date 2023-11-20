@@ -12,8 +12,9 @@ snail = function(array) {
     }
 
     returningArr = [...returningArr, ...newArr[newArr.length - 1].reverse()] 
+    newArr[newArr.length - 1].reverse()
 
-    newArr.slice(0, 0)
+    newArr.splice(0, 1)
 
     
     console.log(newArr);
@@ -31,9 +32,11 @@ array = [[1,2,3],
          [8,9,4],
          [7,6,5]]
 
-
 // snail(array)
 
-console.log(array.slice(0, array.length - 1));
+
+array.slice(0, 2)
+console.log(array);
+
 
  
