@@ -1,0 +1,21 @@
+
+.container{
+    max-width: 1400px;
+    border: 2px solid red;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+.firth{
+    background-color: green;
+    margin-right: auto;
+}
+
+
+.second{
+    background-color: black;
+
+}
