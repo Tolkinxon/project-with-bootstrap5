@@ -24,9 +24,24 @@
 
 function parseInt(string) {
     
+
     const arr = ['zero','one', 'tw', 'th', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven','forty', 'fif']
 
-    const filteredString = string.split(' ')
+
+    // cleanig extra words
+    const filteredString = string.split(' ').filter(item => {
+        if(item !== 'hundred' && item !== 'thousand' && item !== 'million'){
+            return item
+        }
+    }).join('-').split('-')
+
+
+
+   
+
+
+
+
 
     return filteredString
 
@@ -34,3 +49,31 @@ function parseInt(string) {
   }
 
   console.log(parseInt("two hundred forty-six"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //https://www.codewars.com/kata/525c7c5ab6aecef16e0001a5/train/javascript
