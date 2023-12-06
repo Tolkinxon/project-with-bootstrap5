@@ -28,12 +28,25 @@ function parseInt(string) {
     const arr = ['zero','one', 'tw', 'th', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven','forty', 'fif']
 
 
-    // cleanig extra words
+    // cleanig extra words and dashes
     const filteredString = string.split(' ').filter(item => {
         if(item !== 'hundred' && item !== 'thousand' && item !== 'million'){
             return item
         }
     }).join('-').split('-')
+
+
+    // comparing side
+
+    let integersValue = ''
+
+    filteredString.map(item => {
+        arr.filter(item2 => {
+            if(item.includes(item2)){
+                integersValue  +=  item2
+            }
+        })
+    })
 
 
 
@@ -43,7 +56,7 @@ function parseInt(string) {
 
 
 
-    return filteredString
+    return integersValue
 
 
   }
