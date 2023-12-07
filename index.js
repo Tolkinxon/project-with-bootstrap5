@@ -36,32 +36,32 @@ function parseInt(string) {
         if(item !== 'hundred' && item !== 'thousand' && item !== 'million'){
             return item
         }
-    }).join('-').split('-')
-
-
-
-    // comparing side
-    let integersValue = ''
-
-    filteredString.map(item => {
-        arr.filter(item2 => {
-            if(item.includes(item2)){
-                integersValue  +=  item2 + ' '
-            }
-        })
     })
-    const finishedArr = integersValue.split(' ').slice(0, -1)
 
 
-    // generatin to integer side
-    finishedInteger = ''
+
+    // // comparing side
+    // let integersValue = ''
+
+    // filteredString.map(item => {
+    //     arr.filter(item2 => {
+    //         if(item.includes(item2)){
+    //             integersValue  +=  item2 + ' '
+    //         }
+    //     })
+    // })
+    // const finishedArr = integersValue.split(' ').slice(0, -1)
+
+
+    // // generatin to integer side
+    // finishedInteger = ''
    
-    finishedArr.map(item => { 
-        finishedInteger += integerObj[item]
-    })
+    // finishedArr.map(item => { 
+    //     finishedInteger += integerObj[item]
+    // })
 
 
-   return +finishedInteger
+   return filteredString
   }
 
 
