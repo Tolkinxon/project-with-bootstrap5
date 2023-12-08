@@ -68,21 +68,20 @@ function parseInt(string) {
          }
         else if(item.includes('-') && !(item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
 
-            const assign
+            let assignTens = 0
             item.split('-').map(itemMap => {
                 for(let key of arr){
                     if(itemMap.includes(key)){
-                             integerObj[key]
+                        if(assignTens !== 0){
+                            assignTens = assignTens * 10 + integerObj[key]
+                        }
+                        else{
+                            assignTens = integerObj[key]
+                        }
                     }
                 }
-                for(let key of arr){
-                    if(itemMap.includes(key)){
-                        preparingList[i] = integerObj[key] 
-                    }
-                }
-                
             })
-                
+            preparingList[i] = assignTens
          }
 
         
@@ -103,7 +102,7 @@ function parseInt(string) {
 
   
 
-parseInt("two hundred forteen-one")
+parseInt("two thousand hundred twenty-one fifty-nine")
 
 
 
