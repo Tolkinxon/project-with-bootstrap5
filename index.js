@@ -35,18 +35,16 @@ function parseInt(string) {
     const separatingArray = string.split(' ')
 
     for(let i = 0; i < separatingArray.length; i++){
-        if(!separatingArray[i].includes('-') && !(separatingArray[i].slice(-2) === 'ty') && !(separatingArray[i].slice(-4) === 'teen')){
-            arr.map(item => {
-                if(separatingArray[i].includes(item)){
-                     
-                    separatingArray[i] = integerObj[item]
-                }
-            })
+        const item = separatingArray[i]
+        const itemLast = separatingArray[i - 1]
+        
+        if(!item.includes('-') && !(item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
+            
         }
+        
     }
 
-    
-
+  
 
 
 
@@ -63,11 +61,13 @@ function parseInt(string) {
     // })
 
 
- 
+  
   }
 
 
-  parseInt("two hundred forty-six")
+  
+
+parseInt("two hundredty forty-six")
 
 
 
