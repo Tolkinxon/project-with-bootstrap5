@@ -31,11 +31,12 @@ function parseInt(string) {
     const integerObj = {'zero': 0, 'one': 1, 'tw': 2, 'th': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11,'for': 4, 'fif': 5, 'hundred': 100, 'thousand': 1000, 'million': 1000000}
 
 
-    
+    // separating to items
     const separatingArray = string.split(' ')
 
     const preparingList = []
 
+    // converting to numbers
     for(let i = 0; i < separatingArray.length; i++){
 
         const item = separatingArray[i]
@@ -87,13 +88,20 @@ function parseInt(string) {
         
     }
 
-    console.log(preparingList);
+
+    //calculating
+    
+    for(let i = 0; i < preparingList.length; i++){
+        if(i === 100){
+            
+        }
+    }
 
 
 
 
 
-
+return preparingList
 
 
   
@@ -102,7 +110,7 @@ function parseInt(string) {
 
   
 
-parseInt("two thousand hundred twenty-one fifty-nine")
+console.log(parseInt("two hundred thousand twenty-one fifty-nine"));
 
 
 
