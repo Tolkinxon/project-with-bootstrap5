@@ -26,39 +26,75 @@ function parseInt(string) {
     
     
     
-    const arr = ['zero','one', 'tw', 'th', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven','forty', 'fif']
+    const arr = ['zero','one', 'tw', 'th', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven','for', 'fif', 'hundred', 'thousand', 'milloin']
 
-    const integerObj = {'zero': 0, 'one': 1, 'tw': 2, 'th': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11,'forty': 4, 'fif': 5, 'hundred': 100, 'thousand': 1000, 'million': 1000000}
+    const integerObj = {'zero': 0, 'one': 1, 'tw': 2, 'th': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11,'for': 4, 'fif': 5, 'hundred': 100, 'thousand': 1000, 'million': 1000000}
 
 
     
     const separatingArray = string.split(' ')
 
+    const preparingList = []
+
     for(let i = 0; i < separatingArray.length; i++){
+
         const item = separatingArray[i]
-        const itemLast = separatingArray[i - 1]
         
-        if(!item.includes('-') && !(item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
-            
-        }
+ 
+
+        if(!item.includes('-') && (item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
+
+            for(let key of arr){
+                 if(item.includes(key)){
+                     preparingList[i] = integerObj[key] * 10
+                 }
+             }
+         }
+         else if(!item.includes('-') && !(item.slice(-2) === 'ty') && (item.slice(-4) === 'teen')){
+
+            for(let key of arr){
+                 if(item.includes(key)){
+                     preparingList[i] = integerObj[key] + 10
+                 }
+             }
+         }
+         else if(!item.includes('-') && !(item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
+
+            for(let key of arr){
+                 if(item.includes(key)){
+                     preparingList[i] = integerObj[key]
+                 }
+             }
+         }
+        else if(item.includes('-') && !(item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
+
+            const assign
+            item.split('-').map(itemMap => {
+                for(let key of arr){
+                    if(itemMap.includes(key)){
+                             integerObj[key]
+                    }
+                }
+                for(let key of arr){
+                    if(itemMap.includes(key)){
+                        preparingList[i] = integerObj[key] 
+                    }
+                }
+                
+            })
+                
+         }
+
         
     }
 
-  
+    console.log(preparingList);
 
 
 
 
 
 
-
-
-    // // generatin to integer side
-    // finishedInteger = ''
-   
-    // finishedArr.map(item => { 
-    //     finishedInteger += integerObj[item]
-    // })
 
 
   
@@ -67,7 +103,7 @@ function parseInt(string) {
 
   
 
-parseInt("two hundredty forty-six")
+parseInt("two hundred forteen-one")
 
 
 
