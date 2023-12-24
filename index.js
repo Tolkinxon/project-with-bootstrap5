@@ -38,7 +38,13 @@ function parseInt(string) {
 
 
     // separating to items
+
+
     const removeAndWOrd = string.split(' ').filter(item => item !== 'and')
+
+     const listWithoutMillion = removeAndWOrd.join(' ').split('million')
+
+     console.log(listWithoutMillion);
 
     const separatingArray = removeAndWOrd
 
@@ -113,34 +119,23 @@ function parseInt(string) {
     //calculating
 
 
-
-    let firthArr = []
-    let secondArr = []
     
-    for(let i = 0; i < preparingList.length; i++){
-         
-        if(preparingList[i] === 1000000){
-           firthArr = preparingList.slice(0 ,i)
-           secondArr = preparingList.slice(i + 1)
-
-           
-        }
-
-
-    }
+ 
+    
 
 
 
 
 
 
-return secondArr
+
+return preparingList
 
 }
 
 
 
-console.log(parseInt("five hundred and nine million five hundred and five"));
+console.log(parseInt("five hundred and nine million five"));
 
 
 
