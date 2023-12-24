@@ -26,11 +26,7 @@
 
 
 
-function parseInt(string) {
-
-
-    
-    
+function numberMaker(string) {     
     
     const arr = ['zero','one', 'tw', 'th', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',  'eleven','for', 'fif', 'hundred', 'thousand','million']
 
@@ -38,31 +34,17 @@ function parseInt(string) {
 
 
     // separating to items
+    const removeAndWord = string.split(' ').filter(item => item !== 'and')
 
-
-    const removeAndWOrd = string.split(' ').filter(item => item !== 'and')
-
-     const listWithoutMillion = removeAndWOrd.join(' ').split('million')
-
-     console.log(listWithoutMillion);
-
-    const separatingArray = removeAndWOrd
+    const separatingArray = removeAndWord
 
     const preparingList = []
 
 
-
-
-
-    
-
-    // converting to numbers
+     // converting to numbers
     for(let i = 0; i < separatingArray.length; i++){
 
-        const item = separatingArray[i]
-
-        
- 
+        const item = separatingArray[i] 
 
         if(!item.includes('-') && (item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
 
@@ -108,34 +90,52 @@ function parseInt(string) {
 
                  }
              }
-         }
-
-         
-
-        
+         }           
     }
 
+    //calculating number
+    let preparingNumber = 0   
 
-    //calculating
+        if(preparingList.length === 3){
+            preparingNumber = (preparingList[0] * 100) + preparingList[2]
+        }
+        else if(preparingList.length === 2){
+            preparingNumber = (preparingList[0] * 100) 
+        }
+        else{
+            preparingNumber = preparingList[0]
+        }
 
 
-    
- 
-    
-
-
-
-
-
-
-
-return preparingList
-
+return preparingNumber
 }
 
 
 
-console.log(parseInt("five hundred and nine million five"));
+
+
+
+
+
+function parseInt(string) {
+
+    let millionArr = []
+    let thousandArr = []
+    let sunNumber = 0
+
+    if(string.includes('million')){
+        millionArr = string.split(' ').filter(item => item !== 'and').join(' ').split('million')
+        console.log(numberMaker(millionArr[0]))
+    }
+
+
+}
+
+function parseInt(string) {}
+
+
+
+console.log(parseInt("nine hundred twenty-one million fifty-eight"));
 
 
 
