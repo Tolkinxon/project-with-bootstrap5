@@ -22,7 +22,13 @@
 
 
 
+
+
+
+
 function parseInt(string) {
+
+
     
     
     
@@ -32,9 +38,15 @@ function parseInt(string) {
 
 
     // separating to items
-    const separatingArray = string.split(' ')
+    const removeAndWOrd = string.split(' ').filter(item => item !== 'and')
+
+    const separatingArray = removeAndWOrd
 
     const preparingList = []
+
+
+
+    
 
     // converting to numbers
     for(let i = 0; i < separatingArray.length; i++){
@@ -90,10 +102,21 @@ function parseInt(string) {
 
 
     //calculating
+
+    let realNumber = 0
     
     for(let i = 0; i < preparingList.length; i++){
-        if(i === 100){
-            
+        if(preparingList[i + 1] === 100){
+            realNumber = preparingList[i] * 100
+            i++;
+        }
+        if(preparingList[i + 1] === 1000){
+            realNumber = preparingList[i] * 1000
+            i++;
+        }
+        if(preparingList[i + 1] === 1000000){
+            realNumber = preparingList[i] * 100
+            i++;
         }
     }
 
@@ -101,16 +124,14 @@ function parseInt(string) {
 
 
 
+
 return preparingList
 
-
-  
-  }
+}
 
 
-  
 
-console.log(parseInt("two hundred thousand twenty-one fifty-nine"));
+console.log(parseInt("two and hundred five and million hundred and twenty twenty-one"));
 
 
 
