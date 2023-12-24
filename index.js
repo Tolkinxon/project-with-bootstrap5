@@ -122,25 +122,40 @@ function parseInt(string) {
     let millionArr = []
     let thousandArr = []
 
-    let sumArr = []
-
-    
-
 
     if(string.includes('million')){
-        millionArr = string.split(' ').filter(item => item !== 'and').join(' ').split('million ')
-        thousandArr = millionArr[1].split('thousand ')
-        sumArr = [millionArr[0],thousandArr[0],thousandArr[1]]
-    }
-    else if(string.includes('thousand')){
-        thousandArr = string.split(' ').filter(item => item !== 'and').join(' ').split('thousand ')
-        sumArr = [thousandArr[0],thousandArr[1]]
-    }
-    else{
-        sumArr = [string]
-    }
+        let num = 0
+        if(string.slice(-7) === 'million'){
+           millionArr = string.split(' ').filter(item => item !== 'and').join(' ').split(' million')
+           return numberMaker(millionArr[0]) * 1000000
+        }
 
-    
+        millionArr = string.split(' ').filter(item => item !== 'and').join(' ').split(' million ')
+        num = numberMaker(millionArr[0]) * 1000000
+        
+        if(millionArr[1].includes('thousand')){
+            if(millionArr[1].slice(-8) === 'thousand'){
+                thousandArr = millionArr[1].split(' thousand')
+                return num += numberMaker(thousandArr[0]) * 1000
+             }
+
+            thousandArr = millionArr[1].split(' thousand ')
+            console.log(thousandArr[0]);
+            num += numberMaker(thousandArr[0]) * 1000
+            if (thousandArr[1] !== '') {
+                num += numberMaker(thousandArr[1])
+            }
+
+        }
+        else if (millionArr[1] !== '') {
+            num += numberMaker(millionArr[1])
+        }
+
+        return num      
+        
+        
+    }
+   
 
 
 
@@ -150,8 +165,7 @@ function parseInt(string) {
 
 
 
-console.log(parseInt("one hundred"));
-
+console.log(parseInt("one hundred twenty-five million five hundred and eleven thousand seven hundred fifty-one"));
 
 
 
