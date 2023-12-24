@@ -112,21 +112,21 @@ function parseInt(string) {
 
     //calculating
 
-    let realNumber = 0
+
+
+    let firthArr = []
+    let secondArr = []
     
     for(let i = 0; i < preparingList.length; i++){
-        if(preparingList[i + 1] === 100){
-            realNumber = preparingList[i] * 100
-            i++;
+         
+        if(preparingList[i] === 1000000){
+           firthArr = preparingList.slice(0 ,i)
+           secondArr = preparingList.slice(i + 1)
+
+           
         }
-        if(preparingList[i + 1] === 1000){
-            realNumber = preparingList[i] * 1000
-            i++;
-        }
-        if(preparingList[i + 1] === 1000000){
-            realNumber = preparingList[i] * 1000000
-            i++;
-        }
+
+
     }
 
 
@@ -134,13 +134,13 @@ function parseInt(string) {
 
 
 
-return realNumber
+return secondArr
 
 }
 
 
 
-console.log(parseInt("three million"));
+console.log(parseInt("five hundred and nine million five hundred and five"));
 
 
 
