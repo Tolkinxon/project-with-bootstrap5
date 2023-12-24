@@ -34,9 +34,9 @@ function numberMaker(string) {
 
 
     // separating to items
-    const removeAndWord = string.split(' ').filter(item => item !== 'and')
+    
 
-    const separatingArray = removeAndWord
+    const separatingArray = string.split(' ')
 
     const preparingList = []
 
@@ -121,22 +121,36 @@ function parseInt(string) {
 
     let millionArr = []
     let thousandArr = []
-    let sunNumber = 0
+
+    let sumArr = []
+
+    
+
 
     if(string.includes('million')){
-        millionArr = string.split(' ').filter(item => item !== 'and').join(' ').split('million')
-        console.log(numberMaker(millionArr[0]))
+        millionArr = string.split(' ').filter(item => item !== 'and').join(' ').split('million ')
+        thousandArr = millionArr[1].split('thousand ')
+        sumArr = [millionArr[0],thousandArr[0],thousandArr[1]]
     }
+    else if(string.includes('thousand')){
+        thousandArr = string.split(' ').filter(item => item !== 'and').join(' ').split('thousand ')
+        sumArr = [thousandArr[0],thousandArr[1]]
+    }
+    else{
+        sumArr = [string]
+    }
+
+    
+
 
 
 }
 
-function parseInt(string) {}
 
 
 
-console.log(parseInt("nine hundred twenty-one million fifty-eight"));
 
+console.log(parseInt("one hundred"));
 
 
 
