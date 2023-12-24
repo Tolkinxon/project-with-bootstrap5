@@ -32,9 +32,9 @@ function parseInt(string) {
     
     
     
-    const arr = ['zero','one', 'tw', 'th', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven','for', 'fif', 'hundred', 'thousand', 'milloin']
+    const arr = ['zero','one', 'tw', 'th', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',  'eleven','for', 'fif', 'hundred', 'thousand','milloin']
 
-    const integerObj = {'zero': 0, 'one': 1, 'tw': 2, 'th': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11,'for': 4, 'fif': 5, 'hundred': 100, 'thousand': 1000, 'million': 1000000}
+    const integerObj = {'zero': 0, 'one': 1, 'tw': 2, 'th': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11,'for': 4, 'fif': 5, 'hundred': 100, 'thousand': 1000, 'million': 100}
 
 
     // separating to items
@@ -43,6 +43,7 @@ function parseInt(string) {
     const separatingArray = removeAndWOrd
 
     const preparingList = []
+
 
 
 
@@ -71,14 +72,7 @@ function parseInt(string) {
                  }
              }
          }
-         else if(!item.includes('-') && !(item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
 
-            for(let key of arr){
-                 if(item.includes(key)){
-                     preparingList[i] = integerObj[key]
-                 }
-             }
-         }
         else if(item.includes('-') && !(item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
 
             let assignTens = 0
@@ -96,6 +90,18 @@ function parseInt(string) {
             })
             preparingList[i] = assignTens
          }
+
+         else if(!item.includes('-') && !(item.slice(-2) === 'ty') && !(item.slice(-4) === 'teen')){
+
+            for(let key of arr){
+
+                 if(item.includes(key)){
+                     preparingList[i] = integerObj[item]
+                     console.log(integerObj[item]);
+                 }
+             }
+         }
+         
 
         
     }
@@ -131,7 +137,7 @@ return preparingList
 
 
 
-console.log(parseInt("two and hundred five and million hundred and twenty twenty-one"));
+console.log(parseInt("million thousand hundred"));
 
 
 
