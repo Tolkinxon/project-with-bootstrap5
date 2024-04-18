@@ -1,0 +1,15 @@
+.bg-device {
+    width: 40px;
+    height: 40px;
+}
+
+.bg-device:hover{
+    background-color: #D3D4D6 !important;
+    width: 40px;
+    height: 40px;
+}
+
+.bg-device--active {
+   border: 2px solid #A3A4A6 !important;
+   background-color: #D3D4D6 !important;
+}
