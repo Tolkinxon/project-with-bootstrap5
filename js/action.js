@@ -1,20 +1,12 @@
-const devices = document.querySelectorAll('.bg-device')
+const devices = document.querySelectorAll('.device-item')
 
-window.addEventListener('click', (e)=> {
+devices.forEach(item => {
 
-    const selectedEl = e.target.nodeName
-
-    devices.forEach(item => {
-        if(selectedEl === "LI" || selectedEl === "IMG"){
-            item.classList.add('bg-device--active') 
-        }
-        else {
-            item.classList.remove('bg-device--active') 
-        }
-    })
-
+        item.clasList.add('device-item--active')
 
 })
+
+
 
 
 
