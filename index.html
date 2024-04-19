@@ -12,83 +12,79 @@
   <div class="device-versions border-bottom border-4 border-danger align-items-center justify-content-center  py-3">
     <ul class="d-flex list-unstyled  gap-2 align-items-center justify-content-center m-0" > 
       <li class="device-item device-item--active">  
-        <input class="visually-hidden" type="text" id="desktop" >      
-        <label class="bg-device  rounded-circle  d-flex align-items-center justify-content-center" for="desktop">
+        <input class="visually-hidden device-input" type="text" id="desktop" >      
+        <label class="bg-device  rounded-circle  d-flex align-items-center justify-content-center" for="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Desktop Preview">
           <img src="./images/desktop.svg" alt="desktop icon" >
         </label>
       </li>
       
       <li class="device-item">
-        <input class="visually-hidden" type="text" id="tablet">  
-        <label class="bg-device  rounded-circle d-flex align-items-center justify-content-center" for="tablet" >
+        <input class="visually-hidden device-input" type="text" id="tablet">  
+        <label class="bg-device  rounded-circle d-flex align-items-center justify-content-center" for="tablet" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tablet Preview">
           <img src="./images/tablet.svg" alt="tablet icon">
         </label>
       </li>
       
       <li class="device-item">
-        <input class="visually-hidden" type="text" id="mobile" >  
-        <label class="bg-device  rounded-circle  d-flex align-items-center justify-content-center" for="mobile">
+        <input class="visually-hidden device-input" type="text" id="mobile" >  
+        <label class="bg-device  rounded-circle  d-flex align-items-center justify-content-center" for="mobile" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mobile Preview">
           <img  src="./images/mobile.svg" alt="mobile icon">
         </label>
       </li>
     </ul>
   </div>
   
-  <header class="header bg-light">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg  bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar scroll</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Link
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
-              </li>
-            </ul>
-            <button class="btn btn-outline-success" type="submit">Search</button>
+  <div class="wrapper">
+    <header class="header bg-light">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg  bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar scroll</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Link
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+                </li>
+              </ul>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-   <div class="container">
-    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus"  data-bs-placement="bottom" data-bs-content="device">
-      Popover on bottom
-    </button>
-   </div>
-  </main>
+        </nav>
+      </div>
+    </header>
+    
+    <main class="main">
   
- 
+    </main>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  
+  
+  
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <script>
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl)
-    })
-  </script>
   <script src="./js/action.js"></script>
 </body>
 </html>
