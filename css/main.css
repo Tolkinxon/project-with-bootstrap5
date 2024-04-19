@@ -1,6 +1,41 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #212832;
+}
+
+.device-versions {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.wrapper {
+  margin-top: 75px;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main {
+  flex-grow: 1;
+}
+
 .bg-device {
   width: 40px;
   height: 40px;
+}
+
+.bg-device:hover {
+  background-color: #dde0e6 !important;
 }
 
 .device-item--active .bg-device {
