@@ -1,5 +1,5 @@
 const eldevices = document.querySelectorAll('.device-item')
-const wrapper = document.querySelector('.wrapper')
+const iframe = document.querySelector('.ifame')
 const body = document.querySelector('body')
 
 eldevices.forEach(item => {
@@ -12,14 +12,13 @@ eldevices.forEach(item => {
                 console.log(deviceName);
 
                 if(deviceName === "desktop" ){
-                        wrapper.style.width = '100%'
+                        iframe.style.width = '100%'
                 }
                 else if(deviceName === "tablet" ){
-                        window.innerWidth = '700px'
-                        console.log(window.innerWidth);
+                        iframe.style.width = '700px'
                 }
                 else if(deviceName === "mobile" ){
-                        wrapper.style.width = '375px'
+                        iframe.style.width = '375px'
                 }
                 else {
                         console.log('something went wrong');
