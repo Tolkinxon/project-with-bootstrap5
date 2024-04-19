@@ -1,5 +1,6 @@
 const eldevices = document.querySelectorAll('.device-item')
 const wrapper = document.querySelector('.wrapper')
+const body = document.querySelector('body')
 
 eldevices.forEach(item => {
         item.addEventListener('mousedown', ()=>{
@@ -14,7 +15,8 @@ eldevices.forEach(item => {
                         wrapper.style.width = '100%'
                 }
                 else if(deviceName === "tablet" ){
-                        wrapper.style.width = '768px'
+                        window.innerWidth = '700px'
+                        console.log(window.innerWidth);
                 }
                 else if(deviceName === "mobile" ){
                         wrapper.style.width = '375px'
