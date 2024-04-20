@@ -1,6 +1,7 @@
 const  data = [
     {
         id: 1,
+        productSale: false,
         productName: 'Fancy Product',
         productStar: 0,
         productDiscount: '',
@@ -9,6 +10,7 @@ const  data = [
     },
     {
         id: 2,
+        productSale: true,
         productName: 'Special Item',
         productStar: 5,
         productDiscount: '$20.00',
@@ -17,6 +19,7 @@ const  data = [
     },
     {
         id: 3,
+        productSale: true,
         productName: 'Special Item',
         productStar: 0,
         productDiscount: '$50.00',
@@ -25,6 +28,7 @@ const  data = [
     },
     {
         id: 4,
+        productSale: false,
         productName: 'Popular Item',
         productStar: 5,
         productDiscount: '',
@@ -33,6 +37,7 @@ const  data = [
     },
     {
         id: 5,
+        productSale: true,
         productName: 'Sale Item',
         productStar: 0,
         productDiscount: '$50.00',
@@ -41,6 +46,7 @@ const  data = [
     },
     {
         id: 6,
+        productSale: false,
         productName: 'Fancy Product',
         productStar: 0,
         productDiscount: '',
@@ -49,6 +55,7 @@ const  data = [
     },
     {
         id: 7,
+        productSale: true,
         productName: 'Special Item',
         productStar: 5,
         productDiscount: '$20.00',
@@ -57,6 +64,7 @@ const  data = [
     },
     {
         id: 8,
+        productSale: false,
         productName: 'Popular Item',
         productStar: 5,
         productDiscount: '',
