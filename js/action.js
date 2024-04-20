@@ -1,5 +1,7 @@
 const eldevices = document.querySelectorAll('.device-item')
 const iframe = document.querySelector('.ifame')
+const elCloseBtn = document.querySelector('.closing-btn')
+const deviceVersions = document.querySelector('.device-versions')
 const body = document.querySelector('body')
 
 eldevices.forEach(item => {
@@ -8,8 +10,6 @@ eldevices.forEach(item => {
                 item.classList.add('device-item--active')
 
                 const deviceName = item.children[0].id;
-
-                console.log(deviceName);
 
                 if(deviceName === "desktop" ){
                         iframe.style.width = '100%'
@@ -24,6 +24,12 @@ eldevices.forEach(item => {
                         console.log('something went wrong');
                 }
         })
+})
+
+
+elCloseBtn.addEventListener('click', () => {
+        deviceVersions.style.display = 'none'
+        body.style.paddingTop = '0px'
 })
 
 
