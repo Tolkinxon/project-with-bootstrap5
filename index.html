@@ -9,8 +9,8 @@
 </head>
 <body style="overflow: hidden;">
   
-  <div class="device-versions border-bottom border-4 border-danger align-items-center justify-content-center  py-3 bg-white" >
-    <ul class="d-flex list-unstyled  gap-2 align-items-center justify-content-center m-0" > 
+  <section class="device-versions border-bottom border-4 border-danger align-items-center justify-content-center  py-3 bg-white" >
+    <ul class="device-versions__list d-flex list-unstyled  gap-2 align-items-center justify-content-center m-0" > 
       <li class="device-item device-item--active">  
         <input class="visually-hidden" type="text" id="desktop" >      
         <label class="bg-device  rounded-circle  d-flex align-items-center justify-content-center" for="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Desktop Preview">
@@ -32,7 +32,12 @@
         </label>
       </li>
     </ul>
-  </div>
+
+    <div class="device-versions__features position-absolute top-50 end-0 border border-primary translate-middle-y d-flex align-items-center justify-content-between ">
+      <img src="./images/github.svg" alt="github icon">
+      <button class="btn-sm  btn-close"></button>
+    </div>
+  </section>
 
   
   
