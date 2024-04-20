@@ -15,7 +15,7 @@ eldevices.forEach(item => {
                         iframe.style.width = '100%'
                 }
                 else if(deviceName === "tablet" ){
-                        iframe.style.width = '700px'
+                        iframe.style.width = '767px'
                 }
                 else if(deviceName === "mobile" ){
                         iframe.style.width = '375px'
